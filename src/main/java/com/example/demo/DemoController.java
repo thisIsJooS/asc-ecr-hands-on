@@ -4,10 +4,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class HelloController {
+public class DemoController {
 
     @GetMapping("/hello")
     public String hello() {
-        return "Successful deployment of Spring Boot with Docker on EC2!";
+        return "hello world! v1";
+    }
+
+    @GetMapping("/ping")
+    public String ping() {
+        return "pong";
     }
 }
